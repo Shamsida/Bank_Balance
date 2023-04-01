@@ -1,0 +1,45 @@
+body{
+    margin : 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;  
+}
+h1{
+    position: absolute;
+    top: 50px;
+}
+.parent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
+    width: 550px;
+    height: 280px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgb(30, 91, 94);
+    border: 2px solid rgb(55, 176, 197);
+    background-color: paleturquoise;
+}
+p{
+    margin-left: 50px;
+}
+#numb1 , #numb2{
+    padding: 5px;
+    margin-top: 20px;
+}
+#myBtn1 , #myBtn2{
+    padding: 5px;
+    margin-left: 20px;
+    width: 100px;
+}
+#myBtn3{
+    padding: 5px;
+    width: 100px;
+    margin-left: 120px;
+    margin-top: 30px;
+}

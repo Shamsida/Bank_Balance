@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="parent">
+    <h1>MDC BANK</h1>
+    <div id = "main">
+        <div class="container">
+        <h2>Bank Balance Checking System</h2>
+        <p>The available balance is : $ <span id = "balance">1000</span></p>
+        <input type = "number" id="numb1">
+        <button id="myBtn1">Deposit</button><br><br>
+        <input type = "number" id="numb2">
+        <button id="myBtn2">Withdraw</button><br>
+        <button id="myBtn3">Balance</button>
+        <p id="demo"></p>
+        </div>
+    </div>
+</div>
+    <script>
+        //var balance = 0;
+
+        var y = document.getElementById("myBtn1");
+        var z = document.getElementById("myBtn2");
+        var a = document.getElementById("myBtn3");
+
+
+        y.addEventListener("click", myFunction);
+        z.addEventListener("click", mySecondFunction);
+        a.addEventListener("click", myThirdFunction);
+
+
+        function myFunction(){
+            var amount = parseFloat(document.getElementById("numb1").value);
+            if (isNaN(amount) || amount <= 0) {
+                alert("Please enter a valid amount.");
+                return;
+            }
+            //balance += amount;
+            let d = parseFloat(document.getElementById("balance").innerHTML);
+            document.getElementById("balance").innerHTML = d+amount;
+            document.getElementById("numb1").value = "";
+            
+        }
+
+        function mySecondFunction(){
+
+            var amount = parseFloat(document.getElementById("numb2").value);
+            if (isNaN(amount) || amount <= 0) {
+                alert("Please enter a valid amount.");
+                return;
+            }
+            if (amount > balance) {
+                alert("Insufficient funds.");
+                return;
+            }
+
+            document.getElementById("balance").innerHTML -= amount;
+            document.getElementById("numb2").value = "";
+            
+        }
+
+        function myThirdFunction(){
+            let d = document.getElementById("balance").innerHTML;
+            alert("Current balance: $" + d);
+        }
+        
+    </script>
+</body>
+</html>
